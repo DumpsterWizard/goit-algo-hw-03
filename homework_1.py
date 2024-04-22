@@ -1,16 +1,17 @@
 from datetime import datetime
 
+
 def get_days_from_today(date):
     try:
         input_date = datetime.strptime(date, "%Y-%m-%d").date()
-        current_date = (datetime.today().date())
+        current_date = datetime.today().date()
         difference = current_date - input_date
-        print(difference.days)
+        return difference.days
     except ValueError:
-        return ("Wrong date format! Please reenter it!")
-    
+        return "Wrong date format! Please reenter it!"
 
-get_days_from_today("2025-10-09")
+
+print(get_days_from_today("20f5-10-09"))
 
 '''
 спасибо за наводку! Исправил

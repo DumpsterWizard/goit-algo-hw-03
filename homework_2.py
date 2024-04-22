@@ -1,4 +1,6 @@
 import random
+
+
 def get_numbers_ticket(min, max, quatity):
     if min < 1 or max > 1000 or min >= max or quantity <= 0 or quantity > (max - min + 1):
         return []
@@ -10,11 +12,12 @@ def get_numbers_ticket(min, max, quatity):
 
     return sorted_nums
 
+
 min = 1
 max = 49
 quantity = 6
 lottery_nums = get_numbers_ticket(min, max, quantity)
-print("Yoyr lottery nums are:", lottery_nums)
+print("Your lottery nums are: ", lottery_nums)
 
 '''
 На этой задаче пришлось попыхтеть. 
