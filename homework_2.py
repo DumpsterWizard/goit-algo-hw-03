@@ -1,23 +1,23 @@
 import random
 
 
-def get_numbers_ticket(min, max, quatity):
-    if min < 1 or max > 1000 or min >= max or quantity <= 0 or quantity > (max - min + 1):
+def get_numbers_ticket(min_num, max_num, quantity_num):
+    if min_num < 1 or max_num > 1000 or min_num >= max_num or quantity_num <= 0 or quantity_num > (max_num - min_num + 1):
         return []
     unique_nums = set()
 
-    while len(unique_nums) < quantity:
-        unique_nums.add(random.randint(min, max))
+    while len(unique_nums) < quantity_num:
+        unique_nums.add(random.randint(min_num, max_num))
     sorted_nums = sorted(list(unique_nums))
 
     return sorted_nums
 
 
-min = 1
-max = 49
-quantity = 6
-lottery_nums = get_numbers_ticket(min, max, quantity)
-print("Your lottery nums are: ", lottery_nums)
+min_num = 1
+max_num = 49
+quantity_num = 2
+lottery_nums = get_numbers_ticket(min_num, max_num, quantity_num)
+print("Your lottery nums are:", lottery_nums)
 
 '''
 На этой задаче пришлось попыхтеть. 
